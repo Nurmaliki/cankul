@@ -1960,7 +1960,7 @@
                             <picture>
                                 <source scrset="<?= base_url('assets') ?>/img/logo4-min.png" type="image/png" media="(min-width:576px)">
                                 <source scrset="<?= base_url('assets') ?>/img/logo4.webp" type="image/webp" media="(min-width:992px)">
-                                <img src="<?= base_url('assets') ?>/img/logo4.png" alt="logo" width="200px" height="53px">
+                                <img src="<?= base_url('assets') ?>/img/logo4.png" alt="logo" width="90px" height="53px">
                             </picture>
                         </a>
                         <button class="navbar-toggler collapsed text-right" type="button" data-toggle="collapse" data-target="#navbar_test" aria-controls="#navbar_test" aria-expanded="false" aria-label="Toggle navigation">

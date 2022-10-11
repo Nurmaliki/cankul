@@ -466,37 +466,146 @@
 </div>
 <!-- Blog end -->
 <div class="footer disclaimer-section">
+
+
+    <footer class="footer " style="background-color: #F8F9FA; color: white; padding: 60px 0 0;">
+        <div class="container footer-inner">
+            <div class="row">
+
+                <div class="col-lg-4 col-sm-8 col-xs-12 pb-5 mb-5">
+                    <div class="footer-item clearfix row">
+                        <h6 class="font-weight-bold text-dark">Telah Berizin & Diawasi Oleh: </h6>
+                        <div class="row">
+                            <!-- <img class="col-3 lozad" data-src="<?= base_url('assets') ?>/img/logofintech.png" alt="fintech syariah Indonesia"> -->
+                            <img style="width: 94px; height: 37px;" class=" lozad" data-src="<?= base_url('assets') ?>/img/ojk.png" alt="fintech syariah Indonesia">
+                            <img style="width: 43px;height: 44px;x" class=" lozad" data-src="<?= base_url('assets') ?>/img/mui.png" alt="fintech syariah Indonesia">
+                            <img style="width: 105px;height: 30px;" class=" lozad" data-src="<?= base_url('assets') ?>/img/afsi.png" alt="fintech syariah Indonesia">
+                            <img style="width: 47px;height: 50px;" class=" lozad" data-src="<?= base_url('assets') ?>/img/kemkominfo.png" alt="fintech syariah Indonesia">
+                            <img style="width: 75px;height: 37px;" class=" lozad" data-src="<?= base_url('assets') ?>/img/cbqa.png" alt="fintech syariah Indonesia">
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-8 col-xs-12">
+                    <div class="footer-item clearfix">
+                        <h4></h4>
+                        <ul class="links">
+
+                            <li>
+                                <a href="<?= base_url() ?>tentang_kami" target="_blank">
+                                    <!-- <i class="fa fa-angle-right"></i> -->
+                                    Tentang Kami
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?= base_url() ?>tentang_kami" target="_blank">
+                                    <!-- <i class="fa fa-angle-right"></i> -->
+                                    Cara Kerja
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?= base_url() ?>tentang_kami" target="_blank">
+                                    <!-- <i class="fa fa-angle-right"></i> -->
+                                    Laporan Audit Keuangan
+                                </a>
+                            </li>
+
+
+
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-8 col-xs-12">
+                    <div class="footer-item clearfix">
+                        <h4></h4>
+                        <ul class="links">
+
+
+                            <li>
+                                <a href="<?= base_url() ?>tentang_kami" target="_blank">
+                                    <!-- <i class="fa fa-angle-right"></i> -->
+                                    Layanan Pengaduan
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?= base_url() ?>tentang_kami" target="_blank">
+                                    <!-- <i class="fa fa-angle-right"></i> -->
+                                    Syarat & Ketentuan
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="<?= base_url() ?>tentang_kami" target="_blank">
+                                    <!-- <i class="fa fa-angle-right"></i> -->
+                                    Kebijakan Privasi
+                                </a>
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 col-xs-12">
+                    <div class="footer-item ">
+                        <!-- <h4>Office</h4> -->
+                        <ul class="contact-info">
+                            <li>
+                                <!-- <b>PT. Cankul INDONESIA</b> -->
+                                <b>PT. Cankul INDONESIA</b>
+                            </li>
+                            <li>
+                                <!-- <span style=" font-weight: 600;"> Cankul </span> adalah Website/Aplikasi untuk menggalang dana dan Pendanaan proyek properti. <br> -->
+                                <!-- <span style=" font-weight: 600;"> Cankul </span> cankul.id merupakan Fintech Peer to Peer Financing berbasis Syariah di Indonesia yang telah berizin &amp; diawasi oleh Otoritas Jasa Keuangan (OJK) berfokus pada pendanaan properti. <br> -->
+                            </li>
+                            <li>
+                                <!-- <a href="https://www.google.com/maps/d/embed?mid=14ngA9qPXvgQgjX1iRwOnWAcqiFoRZeBH">
+                                            <span style="font-weight: 600;">
+                                            District 8, Prosperity Tower <br>Lantai 12 Unit J,</span><br>
+                                            JL. Jendral Sudirman Kav. 52-53,<br>
+                                            Kelurahan   Senayan,<br>Kecamatan Kebayoran Baru,<br>
+                                            Jakarta Selatan 12190
+                                        </a> <br>. -->
+                                <a href="https://goo.gl/maps/rVBQCXRzuhdq3SsZ8">
+                                    <span style="font-weight: 600;">
+                                        Rukan Puri Mansion blok B no. 7 Jalan Outer Ring West Kembangan, RT.2/RW.1, Kembangan Sel., Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11610
+                                </a> <br>
+                            </li>
+                            <li class="font-weight-bold text-dark">
+                                Call Customer Care: <a href="tel: (021) 1234 4567">(021) 1234 4567</a>
+                            </li>
+                            <li class="font-weight-bold text-dark">
+                                <!-- Email: <a href="mailto:cso@cankul.id">cso@cankul.id</a> -->
+                                Email: <a href="mailto:cso@cankul.id">cso@cankul.id</a>
+                            </li>
+                            <li class="font-weight-bold text-dark">
+
+                                Whatsapp Business: <a rel='noreferrer' href='https://wa.me/628111111111?text=Assalamualaikum,%20Saya%20tertarik%20pada%20Dana%20Syariah.'> 628111111111</a><br>
+                            </li>
+                            <li class="font-weight-bold text-dark">
+                                <a rel="noreferrer" style="color: #202225; font-size: 1rem;" href="https://www.instagram.com/cankulid" class="instagram pt-4" target="_blank"><i class="fab fa-instagram fa-2x pr-2" style="font-size: 1.3rem; color: #202225; "></i> </a>
+                                <a rel="noreferrer" style="color: #202225; font-size: 1rem;" href="https://www.youtube.com/cankulid" class="google pt-4" target="_blank"><i class="fab fa-youtube fa-2x pr-2" style="font-size: 1.3rem; color: #202225; "></i> </a>
+                                <a rel="noreferrer" style="color: #202225; font-size: 1rem;" href="https://www.facebook.com/cankulid/" class="facebook pt-4" target="_blank"><i class="fab fa-facebook fa-2x pr-2" style="font-size: 1.3rem; color: #202225; "></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr style="border: 1px solid #dadce0; margin-top: 0; margin-bottom: 0;">
+        </div>
+    </footer>
+
     <div class="container">
         <div class="ojk-footer-disclaimer">
 
             <p class="title" style="font-weight: 600">PERHATIAN :</p>
             <div class="row">
-                <!-- Start Source Code Old
-						<div class="col-md-6 col-xs-12">
-							<div class="disclaimer-text wow fadeInUp delay-06s">
-								<ol>
-									<li>Layanan Pembiayaan Berbasis Teknologi Informasi merupakan kesepakatan perdata antara Pemberi Pendanaan dengan Penerima Pembiayaan, sehingga segala risiko yang timbul dari kesepakatan tersebut ditanggung sepenuhnya oleh masing-masing pihak.</li>
-                	                <li>Risiko kredit atau gagal bayar ditanggung sepenuhnya oleh Pemberi Pendanaan. Tidak ada lembaga atau otoritas negara yang bertanggung jawab atas risiko gagal bayar ini.</li>
-                	                <li>Penyelenggara dengan persetujuan dari masing-masing Pengguna (Pemberi Pendanaan dan/atau Penerima Pembiayaan) mengakses, memperoleh, menyimpan, mengelola dan/atau menggunakan data pribadi Pengguna ("Pemanfaatan Data") pada atau di dalam benda, perangkat elektronik (termasuk smartphone atau telepon seluler), perangkat keras (hardware) maupun lunak (software), dokumen elektronik, aplikasi atau sistem elektronik milik Pengguna atau yang dikuasai Pengguna, dengan memberitahukan tujuan, batasan dan mekanisme Pemanfaatan Data tersebut kepada Pengguna yang bersangkutan sebelum memperoleh persetujuan yang dimaksud.</li>
-                	                <li>Pemberi Pendanaan yang belum memiliki pengetahuan dan pengalaman pembiayaan, disarankan untuk tidak menggunakan layanan ini.</li>
-                	                <li>Penerima Pembiayaan harus mempertimbangkan tingkat imbal hasil dan biaya lainnya sesuai dengan kemampuan dalam melunasi pembiayaan.</li>
-                	                <li>Setiap kecurangan tercatat secara digital di dunia maya dan dapat diketahui masyarakat luas di media sosial.</li>
-									<li>Pengguna harus membaca dan memahami informasi ini sebelum membuat keputusan menjadi Pemberi Pendanaan atau Penerima Pembiayaan.</li>
-                                    <li>Pemerintah yaitu dalam hal ini Otoritas Jasa Keuangan, tidak bertanggung jawab atas setiap pelanggaran atau ketidakpatuhan oleh Pengguna, baik Pemberi Pendanaan maupun Penerima Pembiayaan (baik karena kesengajaan atau kelalaian Pengguna) terhadap ketentuan peraturan perundang-undangan maupun kesepakatan atau perikatan antara Penyelenggara dengan Pemberi Pendanaan dan/atau Penerima Pembiayaan.</li>
-								</ol>
-							</div>
-						</div>
-						<div class="col-md-6 col-xs-12">
-							<div class="disclaimer-text wow fadeInUp delay-08s">
-								<ol start="9">
-									<li>Setiap transaksi dan kegiatan pembiayaan atau pelaksanaan kesepakatan mengenai pembiayaan atau yang melibatkan Penyelenggara, Pemberi Pendanaan dan/atau Penerima Pembiayaan wajib dilakukan melalui escrow account dan virtual account sebagaimana yang diwajibkan berdasarkan Peraturan Otoritas Jasa Keuangan Nomor 77/POJK.01/2016 tentang Layanan Pembiayaan Berbasis Teknologi Informasi dan pelanggaran atau ketidakpatuhan terhadap ketentuan tersebut merupakan bukti telah terjadinya pelanggaran hukum oleh Penyelenggara sehingga Penyelenggara wajib menanggung ganti rugi yang diderita oleh masing-masing Pengguna sebagai akibat langsung dari pelanggaran hukum tersebut di atas tanpa mengurangi hak Pengguna yang menderita kerugian menurut Kitab Undang-Undang Hukum Perdata.</li>
-								</ol>
-							</div>
-							<p class="footer-disc-ojk wow fadeInUp delay-11s">cankul.id merupakan Fintech Peer to Peer Financing berbasis Syariah di Indonesia yang telah berizin & diawasi oleh Otoritas Jasa Keuangan (OJK). Selain diawasi oleh OJK, cankul.id juga memiliki Dewan Pengawas Syariah yang di rekomendasikan langsung oleh Dewan Syariah Nasional Majelis Ulama Indonesia <B>(DSN-MUI)</B>.</p>
-                            <p class="footer-disc-ojk wow fadeInUp delay-11s">cankul.id memberikan layanan bagi pendana untuk memproduktifkan aset dan dananya dengan prinsip Syariah dan Aman. Segera tingkatkan & produktifkan dana Anda Bersama Danasayriah.id dan menciptakan pemberdayaan ekonomi ummat. <B>Change Yourself. Change Your Future. #AyoHijrahFinansial</B></p>
-						</div>
-                        End Source Code Old -->
-                <!-- <div class="col-md-12 col-xs-12"> -->
+
                 <div class="col-md-12 disclaimerBox">
                     <div class="disclaimer-text">
                         <!-- <ol> -->
@@ -524,172 +633,11 @@
                         <!-- </ol>    -->
                     </div>
                 </div>
-                <!-- </div> -->
-                <!-- <div class="col-md-12 col-xs-12">
-                            <div class="disclaimer-text wow fadeInUp delay-08s">
-                                <p class="footer-disc-ojk wow fadeInUp delay-11s">cankul.id merupakan Fintech Peer to Peer Financing berbasis Syariah di Indonesia yang telah berizin & diawasi oleh Otoritas Jasa Keuangan (OJK). Selain diawasi oleh OJK, cankul.id juga memiliki Dewan Pengawas Syariah yang di rekomendasikan langsung oleh Dewan Syariah Nasional Majelis Ulama Indonesia <B>(DSN-MUI)</B>.</p>
-                                <p class="footer-disc-ojk wow fadeInUp delay-11s">cankul.id memberikan layanan bagi pendana untuk memproduktifkan aset dan dananya dengan prinsip Syariah dan Aman. Segera tingkatkan & produktifkan dana Anda Bersama Danasayriah.id dan menciptakan pemberdayaan ekonomi ummat. <B>Change Yourself. Change Your Future. #AyoHijrahFinansial</B></p>
-                            </div>
-                        </div> -->
+
             </div>
         </div>
+        <hr class="mt-4" style="border: 2px solid #175D43; margin-top: 0; margin-bottom: 0;">
     </div>
-
-    <div class="container-fluid mt-5" style="background-color: #F8F9FA; color: white; padding: 30px 20px 0px 30px;">
-        <div class="row">
-            <h3></h3>
-            <div class="container">
-
-
-                <div class="row no-gutters">
-
-                    <div class="col-lg-6 my-auto">
-                        <div class="row">
-                            <div class="col-lg-12 col-sm-12 col-xs-12" style="background-color: #F8F9FA;">
-                                <label style="color: #202225; display: block; float: left; font-size: 1rem;" class="pt-1 pr-2"> Temukan Kami di Channel Resmi Kami : </label><br>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-12 col-xs-12 my-auto" style="background-color: #F8F9FA; ">
-                                <a rel="noreferrer" style="color: #202225; font-size: 1rem;" href="https://www.instagram.com/cankulid" class="instagram pt-4" target="_blank"><i class="fab fa-instagram" style="font-size: 1.3rem; color: #202225; "></i> Instagram</a>
-                            </div>
-                            <div class="col-lg-4 col-sm-12 col-xs-12 my-auto" style="background-color: #F8F9FA; ">
-                                <a rel="noreferrer" style="color: #202225; font-size: 1rem;" href="https://www.youtube.com/cankulid" class="google pt-4" target="_blank"><i class="fab fa-youtube fa-2x pr-2" style="font-size: 1.3rem; color: #202225; "></i> Youtube</a>
-                            </div>
-                            <div class="col-lg-4 col-sm-12 col-xs-12 my-auto" style="background-color: #F8F9FA; ">
-                                <a rel="noreferrer" style="color: #202225; font-size: 1rem;" href="https://www.facebook.com/cankulid/" class="facebook pt-4" target="_blank"><i class="fab fa-facebook " style="font-size: 1.3rem; color: #202225; "></i> Facebook</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 text-right">
-                        <span class="text-dark title-with-line px-1 d-inline mb-2" style="margin-left: -5px; color: #24921D;">
-                            Download cankul.id Mobile Apps <br></span>
-                        <a href="https://play.google.com/store/apps/details?id=com.cankul.mobilecankul" class="parallax  mb-3 ml-auto" data-speed-x="20" data-speed-y="4">
-                            <img class="img-fluid mt-2 lozad" data-src="<?= base_url('assets') ?>/img/ic-google-play-png-logo.png" width="138px" height="30px" alt="download mobile googleplay">
-                        </a><span width="50"></span>
-                        <a href="https://itunes.apple.com/US/app/id1461445952?mt=8" class="mb-3  mr-4 parallax wowc fadeInUp delay-04s ml-auto" data-speed-x="10" data-speed-y="4">
-                            <img class="img-fluid mt-2 lozad" data-src="<?= base_url('assets') ?>/img/ic-app-store-png-logo.png" width="150px" height="30px" alt="download mobile app store">
-                        </a>
-                    </div>
-                </div>
-                <br>
-                <div class="row no-gutters">
-                    <div class="col-lg-12 col-md-3 col-sm-12 col-xs-12" style="background-color: #F8F9FA; ">
-                        <p style="color: #202225; display: block; float: left; " class="pt-1 pr-2"> Segala bentuk informasi dan komunikasi diluar channel resmi PT Cankul Indonesia, bukan merupakan tanggung jawab PT Cankul Indonesia</p>
-                    </div>
-                </div>
-                <hr class="mt-4" style="border: 2px solid #175D43; margin-top: 0; margin-bottom: 0;">
-            </div>
-
-        </div>
-    </div>
-
-
-    <footer class="footer " style="background-color: #F8F9FA; color: white; padding: 60px 0 0;">
-        <div class="container footer-inner">
-            <div class="row">
-                <div class="col-lg-3 col-sm-6 col-xs-12">
-                    <div class="footer-item ">
-                        <!-- <h4>Office</h4> -->
-                        <ul class="contact-info">
-                            <li>
-                                <!-- <b>PT. Cankul INDONESIA</b> -->
-                                <b>PT. Cankul INDONESIA</b>
-                            </li>
-                            <li>
-                                <!-- <span style=" font-weight: 600;"> Cankul </span> adalah Website/Aplikasi untuk menggalang dana dan Pendanaan proyek properti. <br> -->
-                                <span style=" font-weight: 600;"> Cankul </span> cankul.id merupakan Fintech Peer to Peer Financing berbasis Syariah di Indonesia yang telah berizin &amp; diawasi oleh Otoritas Jasa Keuangan (OJK) berfokus pada pendanaan properti. <br>
-                            </li>
-                            <li>
-                                <!-- <a href="https://www.google.com/maps/d/embed?mid=14ngA9qPXvgQgjX1iRwOnWAcqiFoRZeBH">
-                                            <span style="font-weight: 600;">
-                                            District 8, Prosperity Tower <br>Lantai 12 Unit J,</span><br>
-                                            JL. Jendral Sudirman Kav. 52-53,<br>
-                                            Kelurahan   Senayan,<br>Kecamatan Kebayoran Baru,<br>
-                                            Jakarta Selatan 12190
-                                        </a> <br>. -->
-                                <a href="https://goo.gl/maps/rVBQCXRzuhdq3SsZ8">
-                                    <span style="font-weight: 600;">
-                                        Jalan jalan
-                                </a> <br>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-xs-12">
-                    <div class="footer-item">
-                        <h4></h4>
-                        <ul class="contact-info">
-                            <li class="font-weight-bold text-dark">
-                                <!-- <p>Phone: <a href="tel: +62 (21) 508 58821"> +62 (21) 508-58821</a></p> -->
-                                Call Customer Care: <a href="tel: (021) 1234 4567">(021) 1234 4567</a>
-                                <!--
-                                        Phone: <a href="tel: +62 (21) 521 0306"> +62 (21) 521 0306</a>
-                                        <br>
-                                        Phone: <a href="tel:+62 (21) 521 0142">+62 (21) 521 0142</a>
-                                        <br>
-                                        -->
-                                <!-- WA: <a rel="noreferrer" href="https://wa.me/6282250005050?text=Assalamualaikum,%20Saya%20tertarik%20pada%20Dana%20Syariah."> +62 822 5000 5050</a>
-                                        <br>
-                                        WA: <a rel="noreferrer" href="https://wa.me/628122016060?text=Assalamualaikum,%20Saya%20tertarik%20pada%20Dana%20Syariah."> +62 812 &nbsp;201 &nbsp;6060</a>
-                                        <br>
-                                        WA: <a rel="noreferrer" href="https://wa.me/6281510017070?text=Assalamualaikum,%20Saya%20tertarik%20pada%20Dana%20Syariah."> +62 815 &nbsp;1001 &nbsp;7070</a> -->
-                            </li>
-                            <li class="font-weight-bold text-dark">
-                                <!-- Email: <a href="mailto:cso@cankul.id">cso@cankul.id</a> -->
-                                Email: <a href="mailto:cso@cankul.id">cso@cankul.id</a>
-                            </li>
-                            <li class="font-weight-bold text-dark">
-
-                                Whatsapp Business: <a rel='noreferrer' href='https://wa.me/628111111111?text=Assalamualaikum,%20Saya%20tertarik%20pada%20Dana%20Syariah.'> 628111111111</a><br> </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-8 col-xs-12">
-                    <div class="footer-item clearfix">
-                        <h4></h4>
-                        <ul class="links">
-                            <!--li>
-                                        <a href="/perjanjian" target="_blank"><i class="fa fa-angle-right"></i>Syarat & Ketentuan</a>
-                                    </li>
-                                    <li>
-                                        
-                                        <a href="/privasi" target="_blank"><i class="fa fa-angle-right"></i>Kebijakan Privacy</a> 
-                                        
-                                    </li>
-                                    <li>
-                                        
-                                        <a href="/cookie" target="_blank"><i class="fa fa-angle-right"></i>Kebijakan Cookie</a>
-                                    </li-->
-
-
-                            <li><a href="<?= base_url('assets') ?>/storage/footer/SYARAT%20%26%20KETENTUAN.pdf" target="_blank"><i class="fa fa-angle-right"></i>Syarat &amp; Ketentuan</a></li>
-
-                            <li><a href="<?= base_url('assets') ?>/storage/footer/Kebijakan%20Privasi.pdf" target="_blank"><i class="fa fa-angle-right"></i>Kebijakan Privacy</a></li>
-
-                            <li><a href="<?= base_url('assets') ?>/storage/footer/Kebijakan%20Cookie.pdf" target="_blank"><i class="fa fa-angle-right"></i>Kebijakan Cookie</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-8 col-xs-12 pb-5 mb-5">
-                    <div class="footer-item clearfix">
-                        <h4></h4>
-                        <!-- <img class="col-7 pb-3" data-src="<?= base_url('assets') ?>/img/iso27001.png" alt=""> -->
-                        <a href="https://fintechsyariah.id/id/members/ac00fb20-f4af-11e9-a124-a16025d63bb5" target="_blank">
-                            <img class="col-12 lozad" data-src="<?= base_url('assets') ?>/img/logofintech.png" height="100%" width="100%" alt="fintech syariah Indonesia">
-                            <span aria-hidden="true" style="visibility: hidden;">FSI</span>
-                        </a>
-                        <a href="https://afpi.or.id/profilemember/cankul.id" target="_blank">
-                            <img class="col-12 pt-4 lozad" data-src="<?= base_url('assets') ?>/img/logo-afpi_2022.png" height="100%" width="100%" alt="afpi">
-                            <span aria-hidden="true" style="visibility: hidden;">AFPI</span>
-                        </a></a>
-                    </div>
-                </div>
-            </div>
-            <hr style="border: 1px solid #dadce0; margin-top: 0; margin-bottom: 0;">
-        </div>
-    </footer>
     <div class="row" style="margin: 0px;">
         <div class="col-xl-12 text-center" style="background-color: #F8F9FA; color: #202225;">
             <div class="container">
