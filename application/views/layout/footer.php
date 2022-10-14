@@ -648,6 +648,7 @@
     </div>
 </div>
 
+<script async src="<?= base_url('assets') ?>/js/script_action.js"></script>
 <script async src="<?= base_url('assets') ?>/js/allNew.js"></script>
 <script async src="<?= base_url('assets') ?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <!-- canvas three js -->
