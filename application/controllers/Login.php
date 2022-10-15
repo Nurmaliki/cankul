@@ -21,6 +21,10 @@ class Login extends CI_Controller
      */
     public function index()
     {
+        if ($this->session->userdata('data') != NULL) {
+            redirect(base_url('dashboard'));
+        }
+
         $this->load->view('layout/header');
         $this->load->view('login');
         $this->load->view('layout/footer');
@@ -79,5 +83,11 @@ class Login extends CI_Controller
             echo json_encode($res);
             return;
         }
+    }
+
+    function logout()
+    {
+        $this->session->sess_destroy();
+        redirect(base_url());
     }
 }

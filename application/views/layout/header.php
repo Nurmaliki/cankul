@@ -523,19 +523,8 @@
                         </button>
                         <div class="collapse navbar-collapse w-auto" id="navbar_test">
                             <ul class="navbar-nav ml-auto">
-                                <!--
-                          <li class="nav-item login_header pb-1 pt-0 pl-2 my-auto mlcustome-sm-0">
-                                <a  href="/getPage/id">
-                                  <img src="<?= base_url('assets') ?>/img/iconfinder_ID_167781.png" height="15" alt="indonesia"></span>
-                                </a>
-                          </li>
-                          <li class="nav-item pl-4 pr-4 pb-1 pt-0 my-auto mlcustome-sm-0"  >
-                                <a href="/getPage/en">
-                                  <img src="<?= base_url('assets') ?>/img/iconfinder_US_167805.png" height="15" alt="english">
-                                </a>
-                          </li>
-                          -->
-                                <li class="nav-item dropdown my-auto">
+
+                                <!-- <li class="nav-item dropdown my-auto">
                                     <a class="nav-link dropdown-toggle border-radius-sm-0" href="#" id="navbarDropdownMenuLink_1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <span style="white-space: nowrap;">BERIKAN PENDANAAN</span>
                                     </a>
@@ -544,7 +533,7 @@
                                         <li><a class="dropdown-item" href="<?= base_url() ?>penggalangan-full">PENGGALANGAN DANA TERPENUHI</a></li>
                                         <li><a class="dropdown-item" href="<?= base_url() ?>penggalangan-closed">PENGGALANGAN DANA SELESAI</a></li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <li class="nav-item dropdown my-auto">
                                     <a class="nav-link dropdown-toggle border-radius-sm-0 w-100" href="#" id="navbarDropdownMenuLink_2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <span style="white-space: nowrap;">AJUKAN PEMBIAYAAN</span>
@@ -554,7 +543,7 @@
                                         <li><a class="dropdown-item" href="<?= base_url() ?>dana_rumah">DANA RUMAH</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item dropdown my-auto">
+                                <!-- <li class="nav-item dropdown my-auto">
                                     <a class="nav-link dropdown-toggle border-radius-sm-0" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-expanded="false">
                                         <span style="white-space: nowrap;">TATA CARA</span>
                                     </a>
@@ -573,12 +562,12 @@
                                         <li><a class="dropdown-item" href="<?= base_url() ?>tentang-kami/tim-kami">TIM KAMI</a></li>
                                         <li><a class="dropdown-item" href="<?= base_url() ?>tentang-kami/kontak">KONTAK</a></li>
                                     </ul>
-                                </li>
-                                <li class="nav-item dropdown my-auto">
+                                </li> -->
+                                <!-- <li class="nav-item dropdown my-auto">
                                     <a class="nav-link dropdown-toggle border-radius-sm-0" href="<?= base_url() ?>/blog" target="_blank" aria-haspopup="true" aria-expanded="false">
                                         <span style="white-space: nowrap;">BLOG</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <?php if ($this->session->userdata('data') == NULL) { ?>
                                     <li class="nav-item login_header mx-1 my-1 my-lg-auto">
                                         <a class="btn-md btn-block btn-danaSyariah text-white border-radius-sm-0" href="#" data-toggle="modal" data-target="#loginModalAs">

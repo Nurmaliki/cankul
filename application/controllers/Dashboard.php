@@ -21,8 +21,14 @@ class Dashboard extends CI_Controller
      */
     public function index()
     {
-        // $this->load->view('dashboard/layout/header');
+
+        if ($this->session->userdata('data') == NULL) {
+            redirect(base_url());
+        }
+
+        $this->load->view('dashboard/layout/header');
+        $this->load->view('dashboard/layout/sidebar');
         $this->load->view('dashboard/index');
-        // $this->load->view('dashboard/layout/footer');
+        $this->load->view('dashboard/layout/footer');
     }
 }
