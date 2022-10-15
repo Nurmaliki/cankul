@@ -29,12 +29,20 @@ class Profile extends CI_Controller
         $tipe_user = $this->session->userdata('type');
         $id = $this->session->userdata('data')->id;
         $param = [];
-        $res = api_sync_get($tipe_user . '/profile/' . $id);
 
+        if ($tipe_user == 'beneficiary') {
 
+            $res = api_sync_get('beneficiary/profile/' . $id);
+        } else {
+            $res = api_sync_get('funder/profile/' . $id);
+            # code...
+        }
+
+        // print_r($res);
+        // die();
         $data = [
             'profile' => $res->data,
-            'detail' => empty($res->data) ?  TRUE : FALSE
+            'detail' => empty($res->data) ?  FALSE : TRUE
         ];
         $this->load->view('dashboard/layout/header');
         $this->load->view('dashboard/layout/sidebar');
@@ -73,14 +81,15 @@ class Profile extends CI_Controller
 
         $user = $this->session->userdata('data');
 
-        if ($tipe_user == 'beneficiary') {
-            $data['beneficiary_id'] = $user->id;
-        } else {
-            $data['funder_id'] = $user->id;
-        }
+        // if ($tipe_user == 'beneficiary') {
+        //     $data['beneficiary_id'] = $user->id;
+        // } else {
+        // }
 
         $data = [
-            'update'            => '0',
+            'funder_id'         => $user->id,
+            'beneficiary_id'    => $user->id,
+            'update'            => $p->update,
             'first_name'        => $p->first_name,
             'last_name'         => $p->last_name,
             'gender'            => $p->gender,
@@ -104,7 +113,11 @@ class Profile extends CI_Controller
         ];
 
 
-        $res = api_sync_post('beneficiary/updateprofile', $data);
+        if ($tipe_user == 'beneficiary') {
+            $res = api_sync_post('beneficiary/updateprofile', $data);
+        } else {
+            $res = api_sync_post('funder/updateprofile', $data);
+        }
 
         // upload KTP
 
@@ -129,7 +142,7 @@ class Profile extends CI_Controller
             } else {
                 $data_param['funder_id'] = $user->id;
             }
-            $data_param['update']           = '0';
+            $data_param['update']           = (int)$p->update;
             $data_param['document_name']    = 'KTP';
             $data_param['document_no']      = time();
             $data_param['document_photo']   = new CURLFILE("" . $upload_ktp_api . "");
@@ -150,8 +163,8 @@ class Profile extends CI_Controller
                 $data_param['funder_id'] = $user->id;
             }
 
-            $data_param['update']           = '0';
-            $data_param['document_name']    = 'KTP';
+            $data_param['update']           = (int)$p->update;
+            $data_param['document_name']    = 'FOTO_DIRI';
             $data_param['document_no']      = time();
             $data_param['document_photo']   = new CURLFILE("" . $upload_foto_diri_api . "");
 
@@ -164,7 +177,7 @@ class Profile extends CI_Controller
         if ($res->status) {
             $res_auth = [
                 'status'    =>  true,
-                // 'message'   =>  $res
+                'message'   => $res->messages
             ];
             echo json_encode($res_auth);
             return;
