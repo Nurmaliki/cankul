@@ -33,7 +33,7 @@
                                                 </li>
                                             </ul>
                                             <p></p>
-                                            <h4><b>Daftar Sebagai Pendana</b></h4>
+                                            <h4><b>Daftar Sebagai Funder</b></h4>
                                             <label style="font-size: 16px">Silahkan lengkapi data untuk Mendaftar.</label>
                                         </div>
                                     </div>

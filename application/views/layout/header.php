@@ -368,21 +368,41 @@
     </style>
 
 
-    <?php $this->load->view('layout/loginModalInvestor'); ?>
+    <?php
+
+    if ($this->session->userdata('data') == NULL) {
+        # code...
+        $this->load->view('layout/loginModalInvestor');
+    }
+
+    ?>
     </div>
 
 
 
 
-    <?php $this->load->view('layout/loginModalBorrower'); ?>
+    <?php
+    if ($this->session->userdata('data') == NULL) {
+        $this->load->view('layout/loginModalBorrower');
+    }
+    ?>
 
 
 
 
 
     <div>
-        <?php $this->load->view('layout/modal_login_funder'); ?>
-        <?php $this->load->view('layout/modal_registrasi_funder'); ?>
+        <?php
+        if ($this->session->userdata('data') == NULL) {
+
+            $this->load->view('layout/modal_login_funder');
+        }
+        ?>
+
+        <?php if ($this->session->userdata('data') == NULL) {
+            $this->load->view('layout/modal_registrasi_funder');
+        }
+        ?>
 
 
         <div id="ModalTermCondition" class="modal fade in " tabindex="-1" role="dialog" aria-hidden="true">
@@ -413,8 +433,15 @@
         </div>
 
 
-        <?php $this->load->view('layout/modal_login_beneficiary'); ?>
-        <?php $this->load->view('layout/modal_registrasi_beneficiary'); ?>
+        <?php if ($this->session->userdata('data') == NULL) {
+            $this->load->view('layout/modal_login_beneficiary');
+        }
+        ?>
+        <?php
+        if ($this->session->userdata('data') == NULL) {
+            $this->load->view('layout/modal_registrasi_beneficiary');
+        }
+        ?>
 
 
 
@@ -459,8 +486,16 @@
             }
         });
     </script>
-    <?php $this->load->view('layout/loginModalAs'); ?>
-    <?php $this->load->view('layout/registerModalAs'); ?>
+    <?php
+    if ($this->session->userdata('data') == NULL) {
+        $this->load->view('layout/loginModalAs');
+    }
+    ?>
+    <?php
+    if ($this->session->userdata('data') == NULL) {
+        $this->load->view('layout/registerModalAs');
+    }
+    ?>
 
 
 
@@ -544,16 +579,24 @@
                                         <span style="white-space: nowrap;">BLOG</span>
                                     </a>
                                 </li>
-                                <li class="nav-item login_header mx-1 my-1 my-lg-auto">
-                                    <a class="btn-md btn-block btn-danaSyariah text-white border-radius-sm-0" href="#" data-toggle="modal" data-target="#loginModalAs">
-                                        <span>Masuk</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item login_header mx-1 my-1 my-lg-auto">
-                                    <a class="btn-md btn-block btn-danaSyariah text-white border-radius-sm-0" href="#" data-toggle="modal" data-target="#registerModalAs">
-                                        <span>Daftar</span>
-                                    </a>
-                                </li>
+                                <?php if ($this->session->userdata('data') == NULL) { ?>
+                                    <li class="nav-item login_header mx-1 my-1 my-lg-auto">
+                                        <a class="btn-md btn-block btn-danaSyariah text-white border-radius-sm-0" href="#" data-toggle="modal" data-target="#loginModalAs">
+                                            <span>Masuk</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item login_header mx-1 my-1 my-lg-auto">
+                                        <a class="btn-md btn-block btn-danaSyariah text-white border-radius-sm-0" href="#" data-toggle="modal" data-target="#registerModalAs">
+                                            <span>Daftar</span>
+                                        </a>
+                                    </li>
+                                <?php } else { ?>
+                                    <li class="nav-item login_header mx-1 my-1 my-lg-auto">
+                                        <a class="btn-md btn-block btn-danaSyariah text-white border-radius-sm-0" href="<?= base_url() ?>dashboard">
+                                            <span>Dashboard</span>
+                                        </a>
+                                    </li>
+                                <?php } ?>
 
                             </ul>
                         </div>

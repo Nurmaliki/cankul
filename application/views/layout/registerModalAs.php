@@ -31,11 +31,11 @@
                                     <div class="col-12">
                                         <ul class=" nav nav-pills nav-fill">
                                             <li class="nav-item">
-                                                <a href="#" data-toggle="modal" data-target="#modal_register_investor" data-dismiss="modal" aria-label="Close" class="nav-link active mx-1 my-1">PENDANA</a>
+                                                <a href="#" data-toggle="modal" data-target="#modal_register_investor" data-dismiss="modal" aria-label="Close" class="nav-link active mx-1 my-1">FUNDER</a>
                                             </li>
 
                                             <li class="nav-item">
-                                                <a href="#" data-toggle="modal" data-target="#modal_register_borrower" class="nav-link active mx-1 my-1" id="register-form-link" onclick="$('#registerModalAs').modal('hide')">PENERIMA PENDANAAN</a>
+                                                <a href="#" data-toggle="modal" data-target="#modal_register_borrower" class="nav-link active mx-1 my-1" id="register-form-link" onclick="$('#registerModalAs').modal('hide')">BENEFICIARY</a>
                                             </li>
                                         </ul>
                                     </div>

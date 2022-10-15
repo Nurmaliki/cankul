@@ -35,7 +35,7 @@
                                                  </li>
                                              </ul>
                                              <p></p>
-                                             <h4><b>Daftar Sebagai Penerima Pendanaan</b></h4>
+                                             <h4><b>Daftar Sebagai Beneficiary</b></h4>
                                              <label style="font-size: 16px">Silahkan mendaftar sebagai penerima pendanaan PT. Cankul Indonesia di sini.</label>
                                          </div>
                                      </div>
@@ -129,11 +129,11 @@
 													<span>Agree with term and Condition <a href="/perjanjian" target="_blank">Read More...</a></span>
 												</div>
 											</div-->
-                                             <div class="form-group row" id="checkterm">
+                                             <!-- <div class="form-group row" id="checkterm">
                                                  <div class="form-check ml-0 text-left">
                                                      <input type="checkbox" id="setujusyarat" checked disabled> Saya Menyetujui <a id="checks_brw" href="#" onclick="modalTerm2()">Syarat dan Ketentuan dan Kebijakan Privasi</a> yang berlaku.
                                                  </div>
-                                             </div>
+                                             </div> -->
                                              <div>
                                                  <button type="submit" id="button_register_borrower" disabled class="tn btn-md btn-block btn-danaSyariah text-white">Daftar</button>
                                                  <!-- <a type="button"  class="btn btn-md btn-block text-success" data-toggle="modal" data-dismiss="modal" data-target="#loginModal"> <span class="text-dark">Sudah Punya Akun ? </span> Klik Disini</a> -->

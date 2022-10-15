@@ -36,7 +36,7 @@
 
                                               </ul>
                                               <p></p>
-                                              <h4><b>Masuk Sebagai Penerima Pendanaan</b></h4>
+                                              <h4><b>Masuk Sebagai Beneficiary</b></h4>
                                               <label style="font-size: 16px">Silahkan masukan detail akun Anda untuk dapat melanjutkan</label>
                                           </div>
                                       </div>
@@ -44,7 +44,7 @@
                                   </div>
                                   <div id="login-form">
 
-                                      <form method="POST" action="/borrower/login" aria-label="Login">
+                                      <form id="login_beneficiary_form" method="POST" action="<?= base_url() ?>login/beneficiary" aria-label="Login">
                                           <input type="hidden" name="_token" value="8EcGDYa6p8nbuPZ8oFzXPUtz2dlJ86L2eNrqup4W">
                                           <div class="form-group row">
                                               <div class="col-12 ">

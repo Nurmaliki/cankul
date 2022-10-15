@@ -22,7 +22,7 @@
                                                   <span aria-hidden="true"><i class="lni-close size-sm"></i> </span>
                                               </button>
                                               <p></p>
-                                              <h4><b>Masuk Sebagai Pendana</b></h4>
+                                              <h4><b>Masuk Sebagai Funder</b></h4>
                                               <label style="font-size: 16px">Silahkan masukan detail akun Anda untuk dapat melanjutkan</label>
                                           </div>
                                       </div>
@@ -30,7 +30,7 @@
                                   </div>
                                   <div id="login-form">
                                       <!-- <p>Please enter your user name and password to login</p> -->
-                                      <form method="POST" action="/login" aria-label="Login">
+                                      <form id="login_funder_form" method="POST" action="<?= base_url() ?>login/funder" aria-label="Login">
                                           <input type="hidden" name="_token" value="8EcGDYa6p8nbuPZ8oFzXPUtz2dlJ86L2eNrqup4W">
                                           <div class="form-group row">
                                               <div class="col-12 ">
