@@ -26,11 +26,11 @@ class Campaign extends CI_Controller
         }
 
         $res = api_sync_get('campaign/list');
-        // print_r($res);
+
         $data = [
             'data' => $res->status ? $res->data : []
         ];
-        // die();
+
         $this->load->view('dashboard/layout/header');
         $this->load->view('dashboard/layout/sidebar');
         $this->load->view('dashboard/campaign', $data);
@@ -39,11 +39,10 @@ class Campaign extends CI_Controller
 
     function add()
     {
-        $user = $this->session->userdata('data');
-        $id = $user->id;
-        $res = api_sync_get('beneficiary/company_by_id/' . $id);
-        print_r($res);
-        die();
+        $user   = $this->session->userdata('data');
+        $id     = $user->beneficiary_id == NULL ? $user->id : $user->beneficiary_id;
+        $res    = api_sync_get('beneficiary/company_by_id/' . $id);
+
         // $company = 
         $data = [];
         $this->load->view('dashboard/layout/header');
@@ -54,25 +53,23 @@ class Campaign extends CI_Controller
 
     function add_action()
     {
-        $user = $this->session->userdata('data');
-        $beneficiary_id = $user->id;
-        $p = (object) $_POST;
-        // print_r($p);
-        // die();
+        $user           = $this->session->userdata('data');
+        $beneficiary_id = $user->beneficiary_id == NULL ? $user->id : $user->beneficiary_id;
+        $p              = (object) $_POST;
 
         # jika update = 0  maka itu add 
         # jika update =1 maka itu update
         $data = [
-            'update' => $p->update,
-            'name' => $p->name,
-            'description' => $p->description,
+            'update'            => $p->update,
+            'name'              => $p->name,
+            'description'       => $p->description,
             'return_percentage' => $p->return_percentage,
-            'date_start' => $p->date_start,
-            'date_end' => $p->date_end,
-            'beneficiary_id' => $beneficiary_id,
-            'company_id' => $p->company_id,
-            'target' => $p->target,
-            'status' => 0,
+            'date_start'        => $p->date_start,
+            'date_end'          => $p->date_end,
+            'beneficiary_id'    => $beneficiary_id,
+            'company_id'        => $p->company_id,
+            'target'            => $p->target,
+            'status'            => 0,
         ];
 
         $res = api_sync_post('campaign', $data);

@@ -25,9 +25,9 @@ class Company extends CI_Controller
             redirect(base_url('login/logout'));
         }
 
-        $user = $this->session->userdata('data');
-        $id = $user->beneficiary_id;
-        $res = api_sync_get('beneficiary/company_by_id/' . $id);
+        $user   = $this->session->userdata('data');
+        $id     = $user->beneficiary_id == NULL ? $user->id : $user->beneficiary_id;
+        $res    = api_sync_get('beneficiary/company_by_id/' . $id);
 
         $data = [
             'company' => $res->status ? $res->data : []
@@ -56,7 +56,7 @@ class Company extends CI_Controller
     {
         if ($this->session->userdata('type') == 'beneficiary') {
             $user           = $this->session->userdata('data');
-            $beneficiary_id = $user->beneficiary_id;
+            $beneficiary_id = $user->beneficiary_id == NULL ? $user->id : $user->beneficiary_id;
             $p              = (object) $_POST;
 
             # jika update = 0  maka itu add 

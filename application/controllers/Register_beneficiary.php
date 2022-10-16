@@ -28,17 +28,18 @@ class Register_beneficiary extends CI_Controller
 
     function action()
     {
-        $p = (object)$_POST;
+        $p          = (object)$_POST;
         $username   = $p->username;
         $email      = $p->email;
         $password   = $p->password;
+
         $data = [
             'username'  => $username,
             'email'     => $email,
             'password'  => $password
         ];
-        $res = api_sync_post('beneficiary/register', $data);
 
+        $res = api_sync_post('beneficiary/register', $data);
 
         echo json_encode($res);
         return;

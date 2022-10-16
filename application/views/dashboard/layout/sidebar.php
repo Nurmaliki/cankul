@@ -75,19 +75,23 @@
                                             <span class="sidebar-mini-hide">Ajukan Pendanaan</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a class="" href="<?= base_url() ?>campaign">
-                                            <i class="si si-doc"></i>
-                                            <span class="sidebar-mini-hide">Campaign</span>
-                                        </a>
-                                    </li>
 
-                                    <li>
-                                        <a class="" href="<?= base_url() ?>company">
-                                            <i class="si si-doc"></i>
-                                            <span class="sidebar-mini-hide">Company</span>
-                                        </a>
-                                    </li>
+                                    <?php if ($this->session->userdata('type') != 'funder') { ?>
+                                        <li>
+                                            <a class="" href="<?= base_url() ?>campaign">
+                                                <i class="si si-doc"></i>
+                                                <span class="sidebar-mini-hide">Campaign</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="" href="<?= base_url() ?>company">
+                                                <i class="si si-doc"></i>
+                                                <span class="sidebar-mini-hide">Company</span>
+                                            </a>
+                                        </li>
+                                    <?php } ?>
+
 
                                     <li>
                                         <a class="" href="<?= base_url() ?>profile">
