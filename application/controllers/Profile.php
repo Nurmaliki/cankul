@@ -27,22 +27,27 @@ class Profile extends CI_Controller
             redirect(base_url());
         }
         $tipe_user = $this->session->userdata('type');
-        $id = $this->session->userdata('data')->id;
+        $id = $this->session->userdata('data')->beneficiary_id;
         $param = [];
 
         if ($tipe_user == 'beneficiary') {
 
             $res = api_sync_get('beneficiary/profile/' . $id);
+            $res_company = api_sync_get('beneficiary/company_by_id/' . $id);
         } else {
             $res = api_sync_get('funder/profile/' . $id);
-            # code...
+            $res_company = [
+                'status' => false,
+                'data'  => NULL
+            ];
         }
 
-        // print_r($res);
-        // die();
+
         $data = [
             'profile' => $res->data,
-            'detail' => empty($res->data) ?  FALSE : TRUE
+            'detail' => empty($res->data) ?  FALSE : TRUE,
+            'company' => empty($res_company->data) ?  FALSE : TRUE,
+            'company_data' => empty($res_company->data) ? []  : $res_company->data,
         ];
         $this->load->view('dashboard/layout/header');
         $this->load->view('dashboard/layout/sidebar');
@@ -64,31 +69,22 @@ class Profile extends CI_Controller
 
     function update()
     {
-        // $count = count($_FILES['ktp']
-        // print_r($count);
-        // print_r($_FILES['ktp']);
-        // print_r($_FILES['foto_diri']);
 
-
-
-        // print_r($upload_foto_diri);
-        // print_r(FCPATH . "" . $dirUpload . "" . $namaFile);
-
-        // die();
         $tipe_user = $this->session->userdata('type');
         $p = (object)$_POST;
 
-
         $user = $this->session->userdata('data');
 
-        // if ($tipe_user == 'beneficiary') {
-        //     $data['beneficiary_id'] = $user->id;
-        // } else {
-        // }
+        if ($tipe_user == 'beneficiary') {
+            # code...
+            $user_id = $user->beneficiary_id;
+        } else {
+            $user_id = $user->funder_id;
+        }
 
         $data = [
-            'funder_id'         => $user->id,
-            'beneficiary_id'    => $user->id,
+            'funder_id'         => $user_id,
+            'beneficiary_id'    => $user_id,
             'update'            => $p->update,
             'first_name'        => $p->first_name,
             'last_name'         => $p->last_name,
@@ -111,7 +107,6 @@ class Profile extends CI_Controller
             'funds_source'      => $p->funds_source,
             'monthly_income'    => $p->monthly_income
         ];
-
 
         if ($tipe_user == 'beneficiary') {
             $res = api_sync_post('beneficiary/updateprofile', $data);
@@ -138,9 +133,9 @@ class Profile extends CI_Controller
 
         if ($upload_ktp) {
             if ($tipe_user == 'beneficiary') {
-                $data_param['beneficiary_id'] = $user->id;
+                $data_param['beneficiary_id'] = $user_id;
             } else {
-                $data_param['funder_id'] = $user->id;
+                $data_param['funder_id'] = $user_id;
             }
             $data_param['update']           = (int)$p->update;
             $data_param['document_name']    = 'KTP';
@@ -158,9 +153,9 @@ class Profile extends CI_Controller
         if ($upload_foto_diri) {
             # code...
             if ($tipe_user == 'beneficiary') {
-                $data_param['beneficiary_id'] = $user->id;
+                $data_param['beneficiary_id'] = $user_id;
             } else {
-                $data_param['funder_id'] = $user->id;
+                $data_param['funder_id'] = $user_id;
             }
 
             $data_param['update']           = (int)$p->update;

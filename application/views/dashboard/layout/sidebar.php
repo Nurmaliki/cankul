@@ -76,9 +76,16 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="" href="<?= base_url() ?>proyek_saya">
+                                        <a class="" href="<?= base_url() ?>campaign">
                                             <i class="si si-doc"></i>
-                                            <span class="sidebar-mini-hide">Proyek Saya</span>
+                                            <span class="sidebar-mini-hide">Campaign</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="" href="<?= base_url() ?>company">
+                                            <i class="si si-doc"></i>
+                                            <span class="sidebar-mini-hide">Company</span>
                                         </a>
                                     </li>
 

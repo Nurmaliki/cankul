@@ -21,10 +21,16 @@ class Campaign extends CI_Controller
      */
     public function index()
     {
-        if ($this->session->userdata('data') != NULL) {
-            redirect(base_url('dashboard'));
+        if ($this->session->userdata('data') == NULL) {
+            redirect(base_url('login/logout'));
         }
 
+        $res = api_sync_get('campaign/list');
+        // print_r($res);
+        $data = [
+            'data' => $res->status ? $res->data : []
+        ];
+        // die();
         $this->load->view('dashboard/layout/header');
         $this->load->view('dashboard/layout/sidebar');
         $this->load->view('dashboard/campaign', $data);
@@ -33,9 +39,16 @@ class Campaign extends CI_Controller
 
     function add()
     {
+        $user = $this->session->userdata('data');
+        $id = $user->id;
+        $res = api_sync_get('beneficiary/company_by_id/' . $id);
+        print_r($res);
+        die();
+        // $company = 
+        $data = [];
         $this->load->view('dashboard/layout/header');
         $this->load->view('dashboard/layout/sidebar');
-        $this->load->view('dashboard/campaign', $data);
+        $this->load->view('dashboard/campaign_add', $data);
         $this->load->view('dashboard/layout/footer');
     }
 
@@ -44,6 +57,8 @@ class Campaign extends CI_Controller
         $user = $this->session->userdata('data');
         $beneficiary_id = $user->id;
         $p = (object) $_POST;
+        // print_r($p);
+        // die();
 
         # jika update = 0  maka itu add 
         # jika update =1 maka itu update

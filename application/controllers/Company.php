@@ -21,30 +21,42 @@ class Company extends CI_Controller
      */
     public function index()
     {
-        if ($this->session->userdata('data') != NULL) {
-            redirect(base_url('dashboard'));
+        if ($this->session->userdata('data') == NULL) {
+            redirect(base_url('login/logout'));
         }
 
+        $user = $this->session->userdata('data');
+        $id = $user->beneficiary_id;
+        $res = api_sync_get('beneficiary/company_by_id/' . $id);
+
+        $data = [
+            'company' => $res->status ? $res->data : []
+        ];
         $this->load->view('dashboard/layout/header');
         $this->load->view('dashboard/layout/sidebar');
-        $this->load->view('dashboard/company');
+        $this->load->view('dashboard/company', $data);
         $this->load->view('dashboard/layout/footer');
     }
 
     function add()
     {
+        // $res = api_sync_get('beneficiary/company_by/' . $id);
+        $data = [
+            'company' => FALSE,
+            'company_data' => []
+        ];
+
         $this->load->view('dashboard/layout/header');
         $this->load->view('dashboard/layout/sidebar');
-        $this->load->view('dashboard/company');
+        $this->load->view('dashboard/company_add', $data);
         $this->load->view('dashboard/layout/footer');
     }
 
     function add_action()
     {
         if ($this->session->userdata('type') == 'beneficiary') {
-            # code...
             $user           = $this->session->userdata('data');
-            $beneficiary_id = $user->id;
+            $beneficiary_id = $user->beneficiary_id;
             $p              = (object) $_POST;
 
             # jika update = 0  maka itu add 
@@ -61,14 +73,30 @@ class Company extends CI_Controller
             $res = api_sync_post('beneficiary/company', $data);
 
             echo json_encode($res);
+            // echo "asdash";
             return;
         } else {
             $res = [
                 'status' => false,
-                'message' => 'Anda bukan beneficiary'
+                'messages' => 'Anda bukan beneficiary'
             ];
             echo json_encode($res);
             return;
         }
+    }
+
+    function edit($id)
+    {
+
+        $res = api_sync_get('beneficiary/company_by/' . $id);
+        $data = [
+            'company' => empty($res->data) ? FALSE : TRUE,
+            'company_data' => empty($res->data) ? [] : $res->data
+        ];
+        // print_r($data);
+        $this->load->view('dashboard/layout/header');
+        $this->load->view('dashboard/layout/sidebar');
+        $this->load->view('dashboard/company_edit', $data);
+        $this->load->view('dashboard/layout/footer');
     }
 }

@@ -272,27 +272,6 @@
                                                     <div class="form-group">
                                                         <label for="job_field" class="ml-0">Bidang
                                                             Pekerjaan <i class="text-danger">*</i></label>
-                                                        <!-- <select class="form-control custom-select" id="job_field" name="job_field" required="">
-                                                            <option value="">-- Pilih Satu --</option>
-                                                            <option value="1">Pertanian, Perburuan dan Kehutanan</option>
-                                                            <option value="2">Perikanan</option>
-                                                            <option value="3">Pertambangan dan Penggalian</option>
-                                                            <option value="4">Industri Pengolahan</option>
-                                                            <option value="5">Listrik, Gas, dan Air</option>
-                                                            <option value="6">Konstruksi</option>
-                                                            <option value="7">Perdagangan Besar dan Eceran</option>
-                                                            <option value="8">Penyediaan Akomodasi dan Penyediaan Makan Minum</option>
-                                                            <option value="9">Transportasi, Pergudangan, dan Komunikasi</option>
-                                                            <option value="10">Perantara Keuangan</option>
-                                                            <option value="11">Real Estate, Usaha Persewaan, dan Jasa Perusahaan</option>
-                                                            <option value="12">Administrasi Pemerintahan, Pertahanan, dan Jaminan Sosial Wajib</option>
-                                                            <option value="13">Jasa Pendidikan</option>
-                                                            <option value="14">Jasa Kesehatan dan Kegiatan Sosial</option>
-                                                            <option value="15">Kegiatan Organisasi Yang Tidak Diklasifikasi Ditempat Lain</option>
-                                                            <option value="16">Jasa Perorangan yang Melayani Rumah Tangga</option>
-                                                            <option value="17">Badan Internasional dan Badan Ekstra Internasional Lainnya</option>
-                                                            <option value="18">Kegiatan yang Belum Jelas Batasannya</option>
-                                                        </select> -->
                                                         <input class="form-control" type="text" maxlength="30" id="job_field" name="job_field" placeholder="--" value="<?= $detail ? $profile->job_field : "" ?>">
 
                                                     </div>
@@ -329,17 +308,10 @@
                                                     <div id="preview_camera_diri" name="preview_camera_diri" class="pt-3">
                                                         <img class="imagePreview mb-3" id="preview-1" src="" style="">
                                                         <div>
-                                                            <!-- <button class="btn btn-primary green-dsi" type="button" id="btn_camera_diri" name="btn_camera_diri" onclick="btnCameraClick('camera_diri', 'preview_camera_diri', 'take_camera_diri')">
-                                                                Kamera
-                                                            </button> -->
+
                                                             <input type="file" name="foto_diri" id="foto_diri">
                                                         </div>
                                                     </div>
-
-
-
-
-                                                    <!-- <input type="text" class="input-hidden" id="user_camera_diri_val" required="" name="user_camera_diri_val" value=""> -->
                                                 </div>
 
                                                 <div class="col-xl-3 col-md-6 col-sm-12 mb-4">
@@ -363,6 +335,7 @@
 
 
                                             </div>
+
 
                                         </div>
 

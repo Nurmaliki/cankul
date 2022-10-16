@@ -23,7 +23,7 @@ class Dashboard extends CI_Controller
     {
 
         if ($this->session->userdata('data') == NULL) {
-            redirect(base_url());
+            redirect(base_url('login/logout'));
         }
 
         $this->load->view('dashboard/layout/header');
